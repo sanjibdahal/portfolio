@@ -258,7 +258,8 @@ section{
   text-align: center;
 }
 .owl-dots{
-  margin-top: 12px;
+  margin-top: 18px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
