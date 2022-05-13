@@ -534,10 +534,10 @@ section {
   height: 100%;
 }
 header.sticky ul li a i {
-  display: none;
+  display: none !important;
 }
 header ul li a i {
-  display: none;
+  display: none !important;
 }
 
 @media screen and (max-width:460px) {
@@ -681,11 +681,13 @@ header ul li a i {
     margin: 0;
   }
   header ul li a i{
+    display: inline-flex !important;
     padding-right: 8px;
     color: #fff;
     font-size: 20px;
   }
   header.sticky ul li a i{
+    display: inline-flex !important;
     padding-right: 8px;
     color: #fff;
     font-size: 20px;
