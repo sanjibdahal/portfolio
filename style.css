@@ -685,6 +685,11 @@ header ul li a i {
     color: #fff;
     font-size: 20px;
   }
+  header.sticky ul li a i{
+    padding-right: 8px;
+    color: #fff;
+    font-size: 20px;
+  }
 
   header ul li:hover {
     background: #fff;
@@ -698,7 +703,8 @@ header ul li a i {
   }
 
   header ul li:hover a,
-  header ul li:hover a i{
+  header ul li:hover a i,
+  header.sticky ul li:hover a i{
     color: #2196F3;
   }
 
