@@ -1,0 +1,111 @@
+ :root {
+   --primary: #eaeaea;
+   --red: #ea4335;
+   --green: #34a853;
+   --yellow: #fbbc05;
+   --blue: #4285f4;
+   --boxsh: 0px 5px 6px rgba(0, 0, 0, 0.2);
+ }
+
+ * {
+   margin: 0;
+   padding: 0;
+ }
+
+ .bg {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   min-height: 100vh;
+   background: var(--primary);
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 9999999;
+   transition: .5s ease;
+   display: none;
+ }
+
+ .bg.dark {
+   --boxsh: 0px 0px 10px rgba(255, 255, 255, 0.5);
+
+ }
+
+ .loader {
+   width: 50px;
+   height: 50px;
+   background: #fff;
+   border-radius: 50%;
+   box-shadow: var(--boxsh);
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .load {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   transition: 0.5s ease-in-out;
+   animation: rotate 1.3s linear infinite;
+ }
+
+ @keyframes rotate {
+   0% {
+     transform: rotate(0deg);
+   }
+
+   100% {
+     transform: rotate(360deg);
+   }
+ }
+
+ .load span {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   transform: rotate(calc(90deg * var(--i)));
+   box-sizing: border-box;
+   transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+   animation: animate 0.6s linear infinite;
+ }
+
+ @keyframes animate {
+
+   0%,
+   100% {
+     padding: 13px;
+   }
+
+   50% {
+     padding: 19px;
+   }
+ }
+
+ .load span::before {
+   content: '';
+   position: absolute;
+   height: 6px;
+   width: 6px;
+   border-radius: 50%;
+ }
+
+ .load span:nth-child(1):before {
+   background: var(--green);
+ }
+
+ .load span:nth-child(2):before {
+   background: var(--blue);
+ }
+
+ .load span:nth-child(3):before {
+   background: var(--red);
+ }
+
+ .load span:nth-child(4):before {
+   background: var(--yellow);
+ }
