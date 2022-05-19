@@ -15,7 +15,6 @@
   <link rel="stylesheet" href="owl.carousel.min.css">
   <link rel="stylesheet" href="all.css">
   <link rel="stylesheet" href="poppins.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -288,83 +287,94 @@
     </div>
   </div>
 
-
-
-
-
-  <script>
-    window.addEventListener('scroll', () => {
-      const header = document.querySelector('header');
-      header.classList.toggle('sticky', scrollY > 0);
-    });
-
-    $(document).ready(function() {
-      $('.owl-carousel').owlCarousel({
-        margin: 20,
-        loop: false,
-        responsive: {
-          0: {
-            items: 1,
-            nav: false
-          },
-          600: {
-            items: 2,
-            nav: false
-          },
-          1000: {
-            items: 3,
-            nav: false
-          },
-        }
-      });
-
-    });
-  </script>
-  <script>
-    let menutoggle = document.querySelector('.toggle');
-    let navlink = document.querySelector('.navlink');
-
-    menutoggle.onclick = function()
-    {
-      menutoggle.classList.toggle('active');
-      navlink.classList.toggle('active');
+<script>
+// Owl carousel for slider
+$(document).ready(function() {
+  $('.owl-carousel').owlCarousel({
+    margin: 20,
+    loop: false,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false
+      },
+      600: {
+        items: 2,
+        nav: false
+      },
+      1000: {
+        items: 3,
+        nav: false
+      },
     }
+  });
+});
 
-    document.onclick = function(e) {
-      if (e.target.id !== 'navlink' && e.target.id !== 'toggle') {
-        menutoggle.classList.remove('active');
-        navlink.classList.remove('active');
+// Header scrolling effect
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  header.classList.toggle('sticky', scrollY > 0);
+}); 
 
-      }
-    }
-    
-    let darkbtn = document.querySelector('.darkmode');
-    let body = document.querySelector('body');
-    let i = document.querySelector('.darkmode i')
-    darkbtn.addEventListener('click', ()=>{
-      body.classList.toggle('dark');
-      if(i.classList.contains('fa-sun')){
-        i.classList.replace('fa-sun', 'fa-moon');
-      }
-      else{
-        i.classList.replace('fa-moon', 'fa-sun');
 
-      }
-    })
-    
-    
-    
-    let themebtn = document.querySelector('.theme');
-    let themecolors = document.querySelector('.themecolors');
-    themebtn.addEventListener('click', ()=>{
-      themecolors.classList.toggle('active');
-    })
-    window.addEventListener('scroll', ()=>{
-      if(themecolors.classList.contains('active')){
-        themecolors.classList.remove('active');
-      }
-    })
-  </script>
+// Toggling menus
+let menutoggle = document.querySelector('.toggle');
+let navlink = document.querySelector('.navlink');
+
+menutoggle.onclick = function()
+{
+  menutoggle.classList.toggle('active');
+  navlink.classList.toggle('active');
+}
+
+document.onclick = function(e) {
+  if (e.target.id !== 'navlink' && e.target.id !== 'toggle') {
+    menutoggle.classList.remove('active');
+    navlink.classList.remove('active');
+
+  }
+}
+
+// Dark theme switcher
+let darkbtn = document.querySelector('.darkmode');
+let body = document.querySelector('body');
+let i = document.querySelector('.darkmode i')
+darkbtn.addEventListener('click', () => {
+  body.classList.toggle('dark');
+  if (i.classList.contains('fa-sun')) {
+    i.classList.replace('fa-sun', 'fa-moon');
+  }
+  else {
+    i.classList.replace('fa-moon', 'fa-sun');
+
+  }
+})
+
+
+// Theme changer
+let themebtn = document.querySelector('.theme');
+let themecolors = document.querySelector('.themecolors');
+themebtn.addEventListener('click', () => {
+  themecolors.classList.toggle('active');
+})
+window.addEventListener('scroll', () => {
+  if (themecolors.classList.contains('active')) {
+    themecolors.classList.remove('active');
+  }
+})
+var theme = document.querySelectorAll('.color');
+theme.forEach(color => {
+  color.onclick = () => {
+    let bg = color.style.background;
+    document.querySelector(':root').style.setProperty('--primary-color', bg);
+  }
+
+})
+  
+</script>
+
+
+
 
 </body>
 

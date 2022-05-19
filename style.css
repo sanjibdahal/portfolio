@@ -2,7 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Open+Sans:wght@300;400&family=Orbitron&family=Poppins:wght@200;300;400;500&display=swap');
 
 :root {
-  --primary: #2196f3;
+  --primary-color: #2196f3;
+  --white-color: #fff;
+  --dark-color: #111;
+  --dark-color1: #333;
+  --box-sh: 0px 10px 50px rgba(0, 0, 0, 0.5);
+  --box-sh-input: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 * {
@@ -17,17 +22,21 @@
 }
 
 .colour {
-  color: #2196F3;
+  color: var(--primary-color);
 }
 
 body {
   width: 100%;
-  transition: 0.5s ease;
+  transition: all 1s ease;
 }
 
 body.dark {
-  background: #000;
-  color: #fff;
+  --white-color: #111;
+  --dark-color: #fff;
+  --dark-color1: #fff;
+  --box-sh: 0 10px 50px rgba(255, 255, 255, 0.2);
+  --box-sh-input: 0 0 10px rgba(255, 255, 255, 0.4);
+  transition: all 1s ease;
 }
 
 /* Header section styling */
@@ -45,30 +54,40 @@ header {
 }
 
 header.sticky {
-  background: #fff;
+  background: var(--white-color);
   padding: 20px 100px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
 }
 
 header.sticky .logo {
-  color: var(--primary);
+  color: var(--primary-color);
 }
 
 header .logo span {
-  color: #2196f3;
+  color: var(--primary-color);
 }
 
 header.sticky .logo span {
-  color: #111;
+  color: var(--dark-color);
+}
+
+body.dark header.sticky .logo span,
+body.dark header .logo,
+body.dark header ul li a {
+  color: #fff;
+}
+
+body.dark header.sticky .logo {
+  color: var(--primary-color);
 }
 
 header.sticky ul li a {
-  color: #111;
+  color: var(--dark-color);
   transition: 0.1s ease;
 }
 
 header ul li a:hover {
-  color: #2196f3;
+  color: var(--primary-color);
 }
 
 header .logo {
@@ -76,7 +95,7 @@ header .logo {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 900;
-  color: #fff;
+  color: var(--white-color);
 }
 
 header ul {
@@ -91,7 +110,7 @@ header ul li {
 
 header ul li a {
   text-decoration: none;
-  color: #fff;
+  color: var(--white-color);
   font-size: 16px;
 }
 
@@ -136,13 +155,13 @@ header ul li a i {
 
 .home .content h2 span {
   font-weight: 500;
-  color: #2196f3;
+  color: var(--primary-color);
 }
 
 .btn {
   text-transform: uppercase;
   padding: 10px 30px;
-  background: #2196f3;
+  background: var(--primary-color);
   display: inline-block;
   text-decoration: none;
   outline: none;
@@ -168,7 +187,8 @@ section {
 
 .about {
   width: 100%;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-sh);
+  background: var(--white-color);
 }
 
 .heading {
@@ -182,16 +202,17 @@ section {
 .heading h1 {
   font-size: 30px;
   font-weight: 900;
-  color: #111;
+  color: var(--dark-color);
 }
 
 .heading h1 span {
-  color: #2196f3;
+  color: var(--primary-color);
 }
 
 .heading p {
   text-align: center;
   margin-top: 8px;
+  color: var(--dark-color);
 }
 
 .about .row {
@@ -206,11 +227,13 @@ section {
 
 .about .row .box p {
   text-align: justify;
+  color: var(--dark-color);
 }
 
 .about .row .box h1 {
   font-size: 1.7em;
   margin-bottom: 10px;
+  color: var(--dark-color);
 }
 
 .about .row .col {
@@ -224,17 +247,20 @@ section {
 /* Services section styling */
 .services {
   width: 100%;
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-sh);
+  background: var(--white-color);
 }
 
 .services .heading h1 {
   font-size: 30px;
   font-weight: 900;
+  color: var(--dark-color);
 }
 
 .services .heading p {
   font-size: 16px;
   font-weight: 400;
+  color: var(--dark-color);
 }
 
 .services .container {
@@ -294,7 +320,7 @@ section {
 }
 
 .services .container .card:hover {
-  background: #2196f3;
+  background: var(--primary-color);
 }
 
 .services .container .card:hover .box {
@@ -303,7 +329,8 @@ section {
 
 /* Work section styling  */
 .work {
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-sh);
+  background: var(--white-color);
 }
 
 .work .container {
@@ -316,7 +343,7 @@ section {
 }
 
 .work .container .card h1 {
-  color: #fff;
+  color: var(--white-color);
   font-size: 2em;
   position: absolute;
   bottom: -20px;
@@ -341,14 +368,14 @@ section {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  border: 1px solid #2196f3 !important;
+  border: 1px solid var(--primary-color) !important;
   margin-left: 10px;
   transition: 0.5s ease;
 
 }
 
 .owl-dot.active {
-  background: #2196f3 !important;
+  background: var(--primary-color) !important;
   width: 40px;
   border-radius: 8px;
   transition: 0.5s ease;
@@ -356,7 +383,8 @@ section {
 
 /* Testimonial section styling */
 .testimonial {
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--box-sh);
+  background: var(--white-color);
 }
 
 .testimonial .row {
@@ -368,7 +396,7 @@ section {
 
 .testimonial .row .col {
   min-width: 50%;
-  background: #2196f3;
+  background: var(--primary-color);
   padding: 40px 30px;
   color: #fff;
 }
@@ -394,8 +422,8 @@ section {
 
 /*Contact section styling*/
 .contact {
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-
+  box-shadow: var(--box-sh);
+  background: var(--white-color);
 }
 
 .contact .row {
@@ -415,6 +443,7 @@ section {
 
 .contactinfo h2 {
   margin-bottom: 20px;
+  color: var(--dark-color);
 }
 
 .contactinfobox {
@@ -439,17 +468,18 @@ section {
 
 .contactinfobox .box .icon i {
   font-size: 20px;
-  color: #2196F3;
+  color: var(--primary-color);
 }
 
 .contactinfobox .box .text {
   display: flex;
   flex-direction: column;
   padding-left: 10px;
+  color: var(--dark-color);
 }
 
 .contactinfobox .box .text h3 {
-  color: #2196f3;
+  color: var(--primary-color);
   font-size: 20px;
   font-weight: 600;
 }
@@ -465,19 +495,21 @@ section {
 
 .formbx form h2 {
   margin: 20px 0;
+  color: var(--dark-color);
 }
 
 .formbx form input,
 .formbx form textarea {
   margin-bottom: 15px;
   padding: 15px;
-  background: #fff;
+  background: var(--white-color);
   border: none;
   outline: none;
-  color: #000;
+  color: var(--dark-color1);
   font-size: 20px;
   font-weight: 400;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--box-sh-input);
+  border-radius: 12px;
 }
 
 .formbx form input {
@@ -503,7 +535,7 @@ section {
 .formbx form input[type="submit"] {
   max-width: 100px;
   color: #fff;
-  background: #2196f3;
+  background: var(--primary-color);
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 2px;
@@ -517,19 +549,22 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 3vh;
+  padding-top: 3vh;
+  background: var(--white-color);
+  box-shadow: var(--box-sh);
 }
 
 .copyright .msg {
   position: relative;
   text-align: center;
   padding: 20px 0;
-
 }
 
 .copyright .msg p {
   font-size: 16px;
   font-weight: 500;
+  color: var(--dark-color);
+
 }
 
 .social-icons {
@@ -548,7 +583,7 @@ section {
   height: 40px;
   border-radius: 50%;
   background: #fff;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--box-sh-input);
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
@@ -668,7 +703,7 @@ header .mode .modebox {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--white-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -677,7 +712,7 @@ header .mode .modebox {
 
 header .mode .modebox i {
   transition: 1s ease;
-  color: #000;
+  color: var(--dark-color);
 }
 
 header.sticky .mode .modebox {
@@ -692,14 +727,15 @@ header.sticky .mode .modebox i {
 
 .themecolors {
   position: absolute;
-  right: -300px;
+  right: -320px;
   top: 100px;
   display: flex;
-  background: #fff;
+  background: var(--white-color);
   gap: 15px;
   padding: 10px 20px;
   border-radius: 10px;
   transition: 0.5s ease-in-out;
+  box-shadow: var(--box-sh-input);
 }
 
 .themecolors.active {
@@ -712,13 +748,19 @@ header.sticky .mode .modebox i {
   border-radius: 50%;
 }
 
+.themecolors .color:hover {
+  opacity: 0.8;
+}
+
 @media screen and (max-width:600px) {
   .social-icons .icon {
     margin: 0 5px;
   }
+
   .themecolors {
     top: 70px;
   }
+
   .contactinfobox .box {
     padding: 10px 0;
   }
@@ -816,7 +858,7 @@ header.sticky .mode .modebox i {
   }
 
   header.sticky {
-    background: #fff;
+    background: var(--white-color);
     padding: 10px 20px 0 20px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   }
@@ -827,9 +869,33 @@ header.sticky .mode .modebox i {
   }
 
   header ul li a:hover {
-    color: #2196f3;
+    color: var(--primary-color);
   }
 
+  header.sticky .logo {
+    color: var(--primary-color);
+  }
+
+  header .logo span {
+    color: var(--primary-color);
+  }
+
+  header.sticky .logo span {
+    color: var(--dark-color);
+  }
+
+  body.dark header.sticky .logo span,
+  body.dark header .logo,
+  body.dark header ul li a {
+    color: #fff;
+  }
+
+  body.dark header.sticky .logo {
+    color: var(--primary-color);
+  }
+  body.dark header.sticky {
+    box-shadow: 0 5px 10px rgba(255,255,255,0.2);
+  }
   header .logo {
     text-decoration: none;
     text-transform: uppercase;
@@ -862,7 +928,7 @@ header.sticky .mode .modebox i {
 
   header ul li:hover {
     background: #fff;
-    color: #2196F3;
+    color: var(--primary-color);
   }
 
   header ul li a {
@@ -875,7 +941,7 @@ header.sticky .mode .modebox i {
   }
 
   header ul li:hover a {
-    color: #2196F3;
+    color: var(--primary-color);
   }
 
   header ul li a i,
@@ -889,11 +955,11 @@ header.sticky .mode .modebox i {
   header ul li:hover a,
   header ul li:hover a i,
   header.sticky ul li:hover a i {
-    color: var(--primary);
+    color: var(--primary-color);
   }
 
   header.sticky .toggle span {
-    background: #03b1ff;
+    background: var(--primary-color);
   }
 
   .services .container .card {
