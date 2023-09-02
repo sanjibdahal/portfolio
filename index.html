@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="desc" content="Portfolio website by HTML, CSS and JAVASCRIPT.">
+  <meta name="author" content="Sanjib Dahal" />
+
+  <title>Sanjib Dahal - Portfolio Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="owl.carousel.min.css">
+  <link rel="stylesheet" href="all.css">
+  <link rel="stylesheet" href="poppins.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="fav.ico" type="image/x-icon">
+
+</head>
+
+<body>
+  <p id="contact-msg"></p>
+  <!-- Header Section -->
+  <a href="#home" class="top"><i class="fas fa-arrow-up"></i></a>
+  <header>
+    <a href="#home" class="logo">Portfo<span>lio.</span></a>
+    <ul class="navlink" id="navlink">
+      <li><a href="#home"><i class="fas fa-solid fa-house"></i>Home</a></li>
+      <li><a href="#about"><i class="fa-solid fa-user"></i>About</a></li>
+      <li><a href="#services"><i class="fa-solid fa-gear"></i>Services</a></li>
+      <li><a href="#work"><i class="fa-solid fa-briefcase"></i>Work</a></li>
+      <li><a href="#testimonial"><i class="fa-solid fa-comment"></i>Testimonial</a></li>
+      <li><a href="#contact"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+    </ul>
+    <div class="mode">
+      <div class="modebox darkmode">
+        <i class="fa-solid fa-sun" id="dark"></i>
+      </div>
+      <div class="modebox theme" id="theme">
+        <i class="fa-solid fa-palette"></i>
+      </div>
+    </div>
+    <div class="themecolors" id="themecolors">
+      <div class="color" style="background:#fb839e;"></div>
+      <div class="color" style="background:#ec9412;"></div>
+      <div class="color" style="background:#1fc586;"></div>
+      <div class="color" style="background:#2196f3;"></div>
+      <div class="color" style="background:#cc3a3b;"></div>
+    </div>
+
+    <div class="toggle" id="toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section class="home" id="home">
+    <div class="content">
+      <h3>Hello, I'm</h3>
+      <h1>Sanjib Dahal.</h1>
+      <h2>And I'm a <span class="text autotype"></span></h2>
+      <a href="#about" class="btn">about me</a>
+    </div>
+  </section>
+
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="heading" data-aos="fade-up">
+      <h1>About <span>Me</span></h1>
+    </div>
+    <div class="row" data-aos="fade-up">
+      <div class="box col">
+        <h1 data-aos="fade-up">I'm a <span class="colour autotype1"></span></h1>
+        <p>I care deeply about creating world-class, useful, and beautiful products that help people and make a
+          difference. I can be as involved in your project as you need me to be; from the seed of the idea, to sketches,
+          creative direction, design, copywriting, system design, and even the front-end and WordPress build.<br><br>
+          Design and establish user-friendly websites, including optimized check-out page, resulting in a 25%
+          increase in user clicks and subsequently 33% in customer purchases.
+
+          Establish an interactive and dynamic website that guarantees high traffic, page views, and maximum
+          user experience, generating a 45% increase in the company's sales revenue.
+        </p>
+      </div>
+      <div class="col" data-aos="fade-up">
+        <div class="imgBox">
+          <img src="images/img2.jpg">
+        </div>
+      </div>
+    </div>
+
+    <div class="skills" data-aos="fade-up">
+      <h2>My <span class="colour">Skills</span></h2>
+      <div data-aos="fade-up" class="htmlbox progressbox">
+        HTML
+        <div class="html bar"></div>
+      </div>
+      <div data-aos="fade-up" class="cssbox progressbox">
+        CSS
+        <div class="css bar"></div>
+      </div>
+      <div data-aos="fade-up" class="jsbox progressbox">
+        Javascript
+        <div class="js bar"></div>
+      </div>
+      <div data-aos="fade-up" class="phpbox progressbox">
+        PHP
+        <div class="php bar"></div>
+      </div>
+      <div data-aos="fade-up" class="cbox progressbox">
+        C
+        <div class="c bar"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="heading" data-aos="fade-up">
+      <h1>Our <span>Services</span></h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <div class="container" data-aos="fade-up">
+      <div class="card" data-aos="fade-up">
+        <div class="box">
+          <img src="images/icon1.png">
+          <h1>Web Design</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit cupiditate, aliquam est hic pariatur repellat.</p>
+        </div>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <div class="box">
+          <img src="images/icon2.png">
+          <h1>Web Development</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit cupiditate, aliquam est hic pariatur repellat.</p>
+        </div>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <div class="box">
+          <img src="images/icon3.png">
+          <h1>Android App</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit cupiditate, aliquam est hic pariatur repellat.</p>
+        </div>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <div class="box">
+          <img src="images/icon4.png">
+          <h1>Photography</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit cupiditate, aliquam est hic pariatur repellat.</p>
+        </div>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <div class="box">
+          <img src="images/icon5.png">
+          <h1>Content Writing</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit cupiditate, aliquam est hic pariatur repellat.</p>
+        </div>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <div class="box">
+          <img src="images/icon6.png">
+          <h1>Video Editing</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit cupiditate, aliquam est hic pariatur repellat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Work Section -->
+  <section class="work" id="work">
+    <div class="heading" data-aos="fade-up">
+      <h1>Our Latest <span>Work</span></h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <div class="container owl-carousel carousel" data-aos="fade-up">
+      <div class="card">
+        <img src="images/product1.jpg">
+        <h1 class="pro">Project 1</h1>
+      </div>
+      <div class="card">
+        <img src="images/product2.jpg">
+        <h1 class="pro">Project 2</h1>
+      </div>
+      <div class="card">
+        <img src="images/product3.jpg">
+        <h1 class="pro">Project 3</h1>
+      </div>
+      <div class="card">
+        <img src="images/product4.jpg">
+        <h1 class="pro">Project 4</h1>
+      </div>
+    </div>
+    <div class="button">
+      <a href="#work" class="btn" data-aos="fade-up">view more</a>
+    </div>
+  </section>
+
+
+  <!-- Testimonial Section -->
+
+  <section class="testimonial" id="testimonial">
+    <div class="heading" data-aos="fade-up">
+      <h1>Testimon<span>ials</span></h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+    <div class="row" data-aos="fade-up">
+      <div class="col" data-aos="fade-up">
+        <p><i>Lorem ipsum dolor sit, consetur adiping elit. Vitae minima tenetur totam at, nisi, quam autem, esse sit
+            enim, blandi velit a non asper neceti quas animi repellat laudantium ex beatae quisquam explicabo eveniet
+            incidunt ullam! Ducimus sequi sapiente harum, consr quia eligendi adipisci quod dolor maiores. Libero, ipsum
+            officiis.</i></p>
+        <div class="footer">
+          <h1>Someone Famous</h1>
+          <h3>Creative Designer</h3>
+        </div>
+      </div>
+
+      <div class="col" data-aos="fade-up">
+        <p><i>Lorem ipsum dolor sit, consetur adiping elit. Vitae minima tenetur totam at, nisi, quam autem, esse sit
+            enim, blandi velit a non asper neceti quas animi repellat laudantium ex beatae quisquam explicabo eveniet
+            incidunt ullam! Ducimus sequi sapiente harum, consr quia eligendi adipisci quod dolor maiores. Libero, ipsum
+            officiis.</i></p>
+        <div class="footer">
+          <h1>Someone Famous</h1>
+          <h3>Creative Designer</h3>
+        </div>
+      </div>
+
+      <!-- <div class="col" data-aos="fade-up">
+        <p><i>Lorem ipsum dolor sit, consetur adiping elit. Vitae minima tenetur totam at, nisi, quam autem, esse sit
+            enim, blandi velit a non asper neceti quas animi repellat laudantium ex beatae quisquam explicabo eveniet
+            incidunt ullam! Ducimus sequi sapiente harum, consr quia eligendi adipisci quod dolor maiores. Libero, ipsum
+            officiis.</i></p>
+        <div class="footer">
+          <h1>Someone Famous</h1>
+          <h3>Creative Designer</h3>
+        </div>
+      </div> -->
+    </div>
+  </section>
+
+
+
+  <!-- Contact Section -->
+  <section class="contact about" id="contact">
+    <div class="heading" data-aos="fade-up">
+      <h1>Contact <span>Me</span></h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+    </div>
+    <div class="row">
+      <div class="contactinfo" data-aos="fade-up">
+        <h2>Contact <span class="colour">info</span></h2>
+        <div class="contactinfobox">
+          <div class="box" data-aos="fade-up">
+            <div class="icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="text">
+              <h3>Address</h3>
+              <p>Chaughada, Hetauda<br>Bagmati Province, Nepal<br> 40001</p>
+            </div>
+          </div>
+          <div class="box" data-aos="fade-up">
+            <div class="icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="text">
+              <h3>Phone</h3>
+              <p class="ph">+977-9865500502</p>
+            </div>
+          </div>
+
+          <div class="box" data-aos="fade-up">
+            <div class="icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="text">
+              <h3>Email</h3>
+              <p>sanjibdahal04@gmail.com </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mapouter" data-aos="fade-up">
+        <div class="gmap_canvas"><iframe id="gmap_canvas"
+            src="https://maps.google.com/maps?q=chaughada,%20hetauda&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+            href="https://putlocker-is.org"></a><br>
+          <a href="https://www.embedgooglemap.net"></a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="formbx" data-aos="fade-up">
+      <form id="contact-form">
+        <h2 data-aos="fade-up">Message <span class="colour">Me</span></h2>
+        <input type="text" placeholder="Full Name" name="user_name"  required>
+        <input type="email" placeholder="Email Address" name="user_email" required>
+        <input type="text" placeholder="Subject" name="user_subject" required>
+        <input type="number" placeholder="Contact No." name="user_contact" required>
+        <textarea placeholder="Message" name="user_message" required></textarea>
+        <input type="submit" value="Send">
+      </form>
+    </div>
+    
+    
+  </section>
+
+
+
+  <div class="copyright">
+    <div class="social-icons">
+      <div class="icon facebook"><a href="https://www.facebook.com/sanjib.dahal04"><i class="fab fa-facebook-f"></i></a>
+        <div class="tooltip">Facebook</div>
+      </div>
+
+      <div class="icon instagram">
+        <a href="https://www.instagram.com/san_jib_dahal/">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <div class="tooltip">Instagram</div>
+      </div>
+      <div class="icon twitter"><a href="https://www.twitter.com/sanjibdaahal"><i class="fab fa-twitter"></i></a>
+        <div class="tooltip">Twitter</div>
+      </div>
+      <div class="icon whatsapp"><a href="https://wa.me/qr/722MJF3HZQ27O1"><i class="fab fa-whatsapp"></i></a>
+        <div class="tooltip">Whatsapp</div>
+      </div>
+      <div class="icon youtube"><a href="https://m.youtube.com/channel/UCvKYfwW5z9MEITekG4wH1uw"><i
+            class="fab fa-youtube"></i></a>
+        <div class="tooltip">YouTube</div>
+      </div>
+      <div class="icon github"><a href="https://www.github.com/sanjibdahal"><i class="fab fa-github"></i></a>
+        <div class="tooltip">Github</div>
+      </div>
+    </div>
+    <div class="msg">
+      <p>&copy; Copyright 2022 - Made with <i style="color: red;" class="fas fa-heart"></i> by Sanjib Dahal</p>
+    </div>
+  </div>
+
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <script src="jquery.min.js"></script>
+  <script src="owl.carousel.min.js"></script>
+  <script defer src="script.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+</body>
+
+</html>
